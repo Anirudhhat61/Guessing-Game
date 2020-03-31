@@ -1,0 +1,5 @@
+#Sort using the middle name from the list 
+
+people_list = [['Jon','Smith',"Ram "],['Maria','Lee',"jafhd"],['Bill','Brown',"dfkgh"]]
+people_list.sort(key = lambda i: i[1])
+print (people_list)
