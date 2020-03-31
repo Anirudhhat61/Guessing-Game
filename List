@@ -1,0 +1,75 @@
+my_list = [10, 10.5, 20, 30, "Python", "Java", "Ruby"]
+char = len(my_list)                #length of lists
+print(char)
+
+my_list.pop(5)                     #remove index 5th
+print(my_list)
+
+my_list.append('C++')               #add at end of the list
+print(my_list)
+
+my_list.remove(30)                  #remove the element 30 from my_list
+print(my_list)
+
+index = my_list.index(10.5)          #to return the index of the particular value
+print(index)
+
+my_list.insert(4, 77)                #append value of 77 at index 4
+print(my_list)
+
+my_list.extend([100, 101, 102])      #add values at end of the list
+print(my_list)
+
+howmany = my_list.count(20)           # how many times does the element 20 occur in the list
+print(howmany)
+
+my_list = [10, 10.5, 20, 30, 25.6, 19.25, 11.01, 29.99]
+
+asc = sorted(my_list)                 #sort in ASCENDING ORDER list
+print(asc)
+
+asc = sorted(my_list, reverse=True)   #sort in Descending ORDER list
+print(asc)
+
+small = min(my_list)                    #smallest number in the list
+print(small)
+
+large = max(my_list)                    #largest number in the list
+print(large)
+
+add = sum(my_list)                      #sum of the list
+print(add)
+
+my_list.clear()                         #clear all items in the list
+print(my_list)
+
+add = (my_list + [30.01, 30.02, 30.03]) * 2     #add the elements to list and 2 times in the list
+print(add)
+
+my_list = [10, 10.5, 20, 30, 'Python', 'Java', 'Ruby']
+element = my_list[2]                       #element 20 using index of the list
+print(element)
+
+element = my_list[-2]                     #findin java using negative index
+print(element)
+#SLICING
+my_slice = my_list[3:6]                    #out from [30,python,java]
+print(my_slice)
+
+my_slice = my_list[-4:-1]                  #using negative indexing
+print(my_slice)
+
+my_slice = my_list[3:]
+print(my_slice)                            # [30, 'Python', 'Java', 'Ruby']
+
+my_slice = my_list[:-4]
+print(my_slice)                             # [10, 10.5, 20]  using negative slicing
+
+my_slice = my_list[:5]                      #except the last 2 elements
+print(my_slice)                             # [10, 10.5, 20, 30, 'Python']
+
+my_slice = my_list[::3]                     #every third element starting the first element
+print(my_slice)                             # [10, 30, 'Ruby']
+
+my_slice = my_list[::-4]                    #every 4th element starting the last element
+print(my_slice)                             #['Ruby', 20]
