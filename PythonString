@@ -1,0 +1,34 @@
+#STRINGS
+
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+my_other_string = "Poor guy!"
+print(my_string[-1])
+print(my_string[7])
+print(my_string[-10])
+print(my_string.index("B"))           #return the index of the word
+print(my_string.count("o"))           #finding the count
+print(my_string.upper())              #all caps
+print(my_string.find("Bitcoin"))      #finding the specific word
+print(my_string.startswith("X"))      #check for x
+print(my_string.swapcase())           #capital to small , small to captial
+print(my_string.replace(" ", ""))     #remove space
+print(my_string.replace("i", "btc"))  #replace
+print(my_string.split(","))           #adding comma
+print("&".join(my_string))            #inserting & between each letter
+print(my_string + my_other_string)    #adding two strings
+print(my_string.title())              #1st letter of each word captial
+
+my_string = "In %s, someone paid %s %s for two pizzas."
+print(my_string % ("2010", "10k", "Bitcoin"))       #chaning with %
+my_string = "In {}, someone paid {} {} for two pizzas."
+print(my_string.format("2010", "10k", "Bitcoin"))
+my_string = "In 2010, someone paid 10k Bitcoin for two pizzas."
+print(my_string[3:7])
+print(my_string[26:34])
+print(my_string[-23:-16])      #Bitcoing
+print(my_string[:12])          #starting 12 char
+print(my_string[-9:])          #last 9 char
+print(my_string[::-1])         #for reverse of entire string
+print(my_string[::7])          #every 7th char of the string
+print(my_string[10:])          #except the st 10 char
+print(my_string[:-4])          #leaving last 4 char
