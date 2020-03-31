@@ -1,0 +1,99 @@
+letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+print(letters[1])  # Sequence Indexing
+print(letters[3:6])  # Sequence Slicing
+print(letters[0:3])
+print(letters[:3])
+print(letters[-2])  # Negative Indexing
+print(letters[-3:])
+print(letters[::2])  # Sequence Item Picking
+# create a scrpit to get list from 1 to 20
+myscript = range(1, 21)
+print(list(myscript))
+print([10 * x for x in
+       myscript])  # [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200]
+print(list(map(str, myscript)))  # map is function , goes to all items in range and applies string
+
+# Removing Duplicates a = ["1", 1, "1", 2]    o/p    ['1', 2, 1]
+a = ["1", 1, "1", 2]
+a = list(set(a))  # set  function to convert the list to a set
+print(a)  # order is lost here
+
+# preserve the order
+from _collections import OrderedDict
+
+a = ["1", 1, "1", 2]
+a = list(OrderedDict.fromkeys(a))
+print(a)
+
+# type 2   #Removing Duplicates
+a = ["1", 1, "1", 2]
+b = []
+for i in a:
+    if i not in b:
+        b.append(i)
+#  print(list[i])
+
+# create dictionary   dict is unordered
+#dict = {"a": 1, "b": 2}  # 1st way to create dict
+# a  =  dict( a = 1, b = 2)   #2nd way to create dict
+#print(dict["b"])  # for output [] is used
+
+# sum of values in dict
+d = {"a": 1, "b": 2, "c": 3}
+print(d["a"] + d["b"])
+
+# add new value to dict
+d = {"a": 1, "b": 2}
+d["c"] = 3
+print(d)
+
+# sum of all dict items
+d = {"a": 1, "b": 2, "c": 3}
+print(d["a"] + d["b"] + d["c"])  # way
+print(sum(d.values()))  # smart way   d.values()  returns a list-like dict_values  object
+
+# dict filtering
+#d = {"a": 1, "b": 2, "c": 3}
+#d = dict((key, value) for key, value in d.items() if value <= 1)
+#print(d)
+
+#print different ranges
+from pprint import pprint     #pprint  module which is used to print out well formatted views of datatypes in Python
+d = {"a": list(range(1, 11)), "b": list(range(11, 21)), "c": list(range(21, 31))}
+pprint(d)
+
+from pprint import  pprint   #Multilevel Indexing
+#d = dict(a = list(range(1, 11)), b = list(range(11, 21)), c = list(range(21, 31)))
+pprint(d)
+pprint(d['b'][2])
+
+#Iterate Dictionary
+a = dict(a = list(range(1, 11)), b = list(range(11, 21)), c = list(range(21, 31)))
+for key,value in a.items():
+    print(key, "has value", value)
+
+#Make a script that prints out letters of English alphabet from a to z, one letter per line in the terminal
+from pprint import pprint
+import string
+for letter in string.ascii_lowercase:
+ #   pprint(letter)
+
+#Make a script that prints out numbers from 1 to 10
+
+#for i in range (1,11):
+#    print(i)
+
+#Create a function that calculates acceleration given initial velocity v1, final velocity v2, start time t1, and end time t2.
+
+#def acce(v1, v2, t1, t2):
+#    ab = (v2-v1) / (t2 - t1)
+#    return ab
+#print(acce(0,10,0,20))
+
+#Create a function that takes any string as input and returns the number of words for that string.
+def countword(strng):
+    strng_list = strng.split()
+    return len(strng_list)
+print(countword("WZZZZZZZZZ ZZZZZZZZZZZZZ  ZZZZZ"))
+
+
